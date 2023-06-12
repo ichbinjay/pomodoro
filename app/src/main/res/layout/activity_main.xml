@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8AF8AA1A"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pomodoro Count"
+        android:textColor="#FF000000"
+        android:textSize="24sp"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/TomatoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:columnCount="4"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/Timer"
+        android:layout_width="match_parent"
+        android:layout_height="139dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="00:00"
+        android:fontFamily="@font/poppins_black"
+        android:textColor="#FF000000"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/TomatoContainer"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/PomodoroButton"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="164dp"
+        android:textSize="20sp"
+        android:backgroundTint="#3F51B5"
+        android:text="Work"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Timer" />
+
+    <Button
+        android:id="@+id/StopButton"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:textSize="20sp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#3F51B5"
+        android:text="Stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PomodoroButton" />
+
+    <Button
+        android:id="@+id/ShortBreakButton"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="164dp"
+        android:backgroundTint="#3F51B5"
+        android:textSize="20sp"
+        android:text="Break"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toEndOf="@+id/PomodoroButton"
+        app:layout_constraintTop_toBottomOf="@+id/Timer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
